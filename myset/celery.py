@@ -3,7 +3,7 @@ from decouple import config
 import os
 
 
-app = Celery(config('PROJECT_NAME', default='demo'))
+app = Celery(config('PROJECT_NAME', default='myset'))
 
 # Using a string here means the worker don't have to serialize
 # the configuration object to child processes.
