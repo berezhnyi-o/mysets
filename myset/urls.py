@@ -32,12 +32,3 @@ if settings.DEBUG:
             }),
     ]
 
-
-# Test Sentry
-def trigger_error(request):
-    err = 1 / 0
-
-
-urlpatterns += [
-    path("sentry-debug/", trigger_error)
-]
