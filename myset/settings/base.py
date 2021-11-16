@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'staticfiles'))
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, PROJECT_NAME, 'static'),
+    os.path.join(BASE_DIR, PROJECT_NAME, 'staticfiles'),
 )
 
 MEDIA_ROOT = config('MEDIA_ROOT', default=os.path.join(BASE_DIR, 'media'))
