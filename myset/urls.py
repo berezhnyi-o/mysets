@@ -3,8 +3,8 @@ from django.urls import path, re_path, include
 from django.conf import settings
 from django.views.generic import TemplateView
 
-
 admin.site.site_header = 'Admin console'
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,3 +31,13 @@ if settings.DEBUG:
                 'show_indexes': True,
             }),
     ]
+
+
+# Test Sentry
+def trigger_error(request):
+    err = 1 / 0
+
+
+urlpatterns += [
+    path("sentry-debug/", trigger_error)
+]
